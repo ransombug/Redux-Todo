@@ -1,23 +1,23 @@
-import React from 'react'
-import {Container} from 'reactstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
+import React from "react";
+import { Container } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
+//importing components
 
-// Import Components
-import Todo from './Components/Todo'
-import TodoForm from './Components/TodoForm'
+import Todo from "./components/Todo";
+import TodoForm from "./components/TodoForm";
 
-// Import Redux
-import {Provider} from 'react-redux';
-import Store from './Central Store/Store'
+//redux
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <Provider store={Store}>
-      <Container>
-        <Todo></Todo>
-        <TodoForm></TodoForm>
+    <Provider store={store}>
+      <Container fluid>
+        <Todo />
+        <TodoForm />
       </Container>
     </Provider>
   );
